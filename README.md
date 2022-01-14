@@ -41,7 +41,7 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 #### Bloco 10-a: Testes automatizados com Jest
 - [x] Projeto - Jest Assíncrono e Mocking
 
-## Desenvolvimento Front-end :hourglass_flowing_sand:
+## Desenvolvimento Front-end :heavy_check_mark:
 
 #### Bloco 10-b: Introdução à React
 - [x] Projeto - Movie Cards Library
@@ -68,6 +68,47 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 - [x] Projeto - StarWars Datatable com Context API e Hooks
 
 #### Bloco 18: Projeto App de Receitas
-- [ ] Projeto - App de Receitas
+- [x] Projeto - App de Receitas
 
+## Desenvolvimento Back-end :hourglass_flowing_sand:
 
+#### Bloco 19: Docker: Utilizando Containers
+- [ ] Projeto - Docker Todo-List
+
+#### Bloco 20: Introdução à SQL
+- [ ] Projeto - All For One
+
+#### Bloco 21: Funções SQL, JOINs e Normalização
+- [ ] Aula ao vivo + Projeto - One For All
+
+#### Bloco 22: Introdução ao desenvolvimento Web com Node.js
+- [ ] Projeto - Talker Manager
+
+#### Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful
+- [ ] Projeto - Store Manager
+
+#### Bloco 24: Node.js: ORM e Autenticação
+- [ ] Projeto - API de Blogs
+
+#### Bloco 25: Deployment
+- [ ] Projeto - Stranger Things
+
+#### Bloco 26: TypeScript
+- [ ] Projeto - Trybe Smith
+
+#### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
+- [ ] Projeto - Trybers and Dragons
+
+#### Bloco 28: Projeto - TFC - Trybe Futebol Clube
+- [ ] Projeto - TFC - Trybe Futebol Clube
+
+#### Bloco 29: Introdução ao MongoDB
+- [ ] Projeto - Data Flights
+
+#### Bloco 30: MongoDB: Updates Simples e Complexos
+- [ ] Projeto - Commerce
+
+#### Bloco 31: MasterClass - VPS, CI/CD
+
+#### Bloco 32: Projeto - App de Delivery
+- [ ] Projeto - App de Delivery
