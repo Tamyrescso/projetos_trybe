@@ -1,0 +1,18 @@
+.main-filters {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+body {
+  background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+  color: aliceblue;
+}
+
+.title-container {
+  text-align: center;
+  margin: 20px auto;
+}
+.title {
+  width: 13rem;
+}

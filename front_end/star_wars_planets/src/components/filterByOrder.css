@@ -1,0 +1,11 @@
+.form-order-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 30%;
+}
+
+.form-order-filter > * {
+  padding: 1% 2%;
+  text-align: center;
+}

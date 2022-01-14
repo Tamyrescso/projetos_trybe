@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Anakin;
+  src: url('../fonts/anakinmono.ttf');
+}
+
+.form-number-filter {
+  display: flex;
+  justify-content: center;
+  flex-basis: 30%;
+}
+
+.form-number-filter > * {
+  padding: .5% 2%;
+  text-align: center;
+  margin-right: 2%;
+}
+
+.btn-filter {
+  background-color: rgb(239, 239, 243);
+  border: none;
+  border-radius: 5%;
+  font-family: Anakin;
+  height: 100%;
+}

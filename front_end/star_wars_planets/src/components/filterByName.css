@@ -1,0 +1,13 @@
+.instruction {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: Anakin;
+  font-size: large;
+}
+
+.input-name {
+  margin: 10px auto 20px auto;
+  padding: 5px 20px;
+  display: flex;
+}

@@ -1,0 +1,393 @@
+#root {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)), url(https://i2.wp.com/www.artofvfx.com/wp-content/uploads/2021/01/AliceInBorderland_DigitalFrontier_ITW_12.jpg?ssl=1);
+    background-position: center;
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.925);
+    margin: auto 200px;
+}
+
+.wrapper .title {
+    font-family: 'Cloister Black', sans-serif;
+    font-size: 90px;
+    text-shadow: 3px 2px rgba(145, 131, 131, 0.925);
+    margin: 70px auto 0px auto;
+}
+
+.top-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Bree Serif', serif;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px 100px 10px 100px;
+    height: 600px;
+    width: fit-content;
+}
+
+form h2 {
+    align-self: center;
+}
+
+form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form > input, textarea, select {
+    border: none;
+    border-bottom: solid rgb(202, 6, 6) 2px;
+    width: 300px;
+    padding-top: 10px;
+}
+
+form .attrs {
+    display: flex;
+}
+
+.attrs > .attr-label, .attr-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 10px auto;
+}
+
+.attr-label label {
+    margin: 15px 10px 0 0;
+}
+
+.attr-input input {
+    padding-top: 10px;
+    border: none;
+    border-bottom: solid rgb(202, 6, 6) 2px;
+    width: 190px;
+}
+
+form .image-div {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.image-div .image {
+    margin-left: 10px;
+    width: 220px;
+    border: none;
+    border-bottom: solid rgb(202, 6, 6) 2px;
+    padding-top: 10px;
+}
+
+form .rare {
+    width: 205px;
+    text-align: center;
+}
+
+form .trunfo-div {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.trunfo-div .trunfo {
+    margin-left: 10px;
+}
+
+.btn-save:disabled {
+    border: none;
+    width: 90px;
+    height: 35px;
+    align-self: center;
+    background-color: rgba(173, 161, 161, 0.842);
+    color: rgba(102, 100, 100, 0.925);
+    border-radius: 5%;
+    font-size: 15px;
+}
+
+.btn-save:not(:disabled) {
+    border: none;
+    width: 90px;
+    height: 35px;
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.925);
+    border-radius: 5%;
+    box-shadow: 5px 2px 5px rgb(206, 86, 7);
+    font-size: 15px;
+}
+
+.btn-save:hover:not(:disabled) {
+    cursor: pointer;
+    transform: scale3d(0.9, 0.9, 0.9);
+}
+
+.card {
+    display: flex;
+    width: 360px;
+    height: 500px;
+    background-color: rgba(34, 34, 41, 0.966);
+    box-shadow: 0 0 5px 5px rgb(248, 167, 112), 0 0 10px 10px rgb(206, 86, 7), inset 0 0 10px 5px rgb(206, 86, 7);
+}
+
+.rotate {
+    transform: rotate(180deg)
+}
+
+.card .icons-left {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 95%;
+    margin-left: 5px;
+    color: rgb(255, 100, 100);
+    text-shadow:
+    0 0 7px rgb(235, 94, 94),
+    0 0 10px rgb(235, 94, 94),
+    0 0 21px rgb(235, 94, 94),
+    0 0 42px rgb(255, 38, 0),
+    0 0 82px rgb(255, 38, 0),
+    0 0 92px rgb(255, 38, 0),
+    0 0 102px rgb(255, 38, 0),
+    0 0 151px rgb(255, 0, 0);
+    font-size: 20px;
+}
+
+.icons-left p {
+    margin: 0;
+    font-weight:1000;
+    color: rgb(250, 250, 250);
+    text-shadow:
+    0 0 7px rgb(250, 250, 250),
+    0 0 10px rgb(250, 250, 250),
+    0 0 21px rgb(250, 250, 250),
+    0 0 42px rgb(255, 38, 0),
+    0 0 82px rgb(255, 38, 0),
+    0 0 92px rgb(255, 38, 0),
+    0 0 102px rgb(255, 38, 0),
+    0 0 151px rgb(255, 0, 0);
+}
+
+.card .card-content {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-content > *:not(:first-child, :last-child) {
+    background-color: rgba(63, 63, 68, 0.808);
+    width: 300px;
+    border: rgba(54, 54, 63, 0.76) inset 5px;
+    margin: 5px auto;
+}
+
+.card-content h1 {
+    height: 40px;
+    line-height: 40px;
+    color: rgb(235, 226, 226);
+    font-family: 'Cloister Black', sans-serif;
+    text-shadow: 2px 3px rgba(128, 120, 120, 0.925);
+    font-size: 40px;
+    /* text-shadow:
+    0 0 7px rgb(216, 104, 104),
+    0 0 10px rgb(216, 104, 104),
+    0 0 21px rgb(216, 104, 104),
+    0 0 42px rgb(202, 6, 6),
+    0 0 82px rgb(202, 6, 6),
+    0 0 92px rgb(202, 6, 6),
+    0 0 102px rgb(202, 6, 6),
+    0 0 151px rgb(202, 6, 6); */
+}
+
+.card-content img {
+    height: 170px;
+    background-color: rgba(63, 63, 68, 0.808);
+}
+
+.card-content .description {
+    height: 50px;
+    word-wrap: break-word;
+    padding: 3px;
+}
+
+.card-content .attr-wrapper {
+    height: 60px;
+    text-align: start;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 5px;
+}
+
+.attr-wrapper ul {
+    margin: 3px;
+    padding: 1px 0;
+    width: 85px;
+    text-align: center;
+    list-style: none;
+}
+
+.card-content .trunfo-card {
+    margin: 15px auto;
+    color: rgb(236, 181, 181);
+    text-shadow:
+    0 0 7px rgb(235, 94, 94),
+    0 0 10px rgb(235, 94, 94),
+    0 0 21px rgb(235, 94, 94),
+    0 0 42px rgb(255, 38, 0),
+    0 0 82px rgb(255, 38, 0),
+    0 0 92px rgb(255, 38, 0),
+    0 0 102px rgb(255, 38, 0),
+    0 0 151px rgb(255, 0, 0);
+    animation: pulsate 1.5s infinite;
+}
+
+@keyframes pulsate {
+    
+    100% {
+
+    text-shadow:
+    0 0 4px rgb(238, 69, 69),
+    0 0 11px rgb(226, 72, 72),
+    0 0 19px rgb(223, 70, 70),
+    0 0 40px rgb(255, 38, 0),
+    0 0 80px rgb(255, 38, 0),
+    0 0 90px rgb(255, 38, 0),
+    0 0 150px rgb(255, 38, 0),
+    0 0 200px rgb(255, 1, 1);
+    }
+
+    0% {
+
+    text-shadow:
+    0 0 1px rgb(247, 239, 239),
+    0 0 2px rgb(245, 219, 219),
+    0 0 4px rgb(233, 197, 197),
+    0 0 5px rgb(255, 38, 0),
+    0 0 35px rgb(255, 38, 0),
+    0 0 40px rgb(255, 38, 0),
+    0 0 50px rgb(255, 38, 0),
+    0 0 70px rgb(255, 0, 0);
+    }
+}
+
+.card .icons-right {
+    width: 25px;
+    height: 500px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 95%;
+    margin-right: 5px;
+    color: rgb(255, 100, 100);
+    text-shadow:
+    0 0 7px rgb(235, 94, 94),
+    0 0 10px rgb(235, 94, 94),
+    0 0 21px rgb(235, 94, 94),
+    0 0 42px rgb(255, 38, 0),
+    0 0 82px rgb(255, 38, 0),
+    0 0 92px rgb(255, 38, 0),
+    0 0 102px rgb(255, 38, 0),
+    0 0 151px rgb(255, 0, 0);
+    font-size: 20px;
+}
+
+.icons-right p {
+    margin: 0;
+    font-weight:1000;
+    color: rgb(250, 250, 250);
+    text-shadow:
+    0 0 7px rgb(250, 250, 250),
+    0 0 10px rgb(250, 250, 250),
+    0 0 21px rgb(250, 250, 250),
+    0 0 42px rgb(255, 38, 0),
+    0 0 82px rgb(255, 38, 0),
+    0 0 92px rgb(255, 38, 0),
+    0 0 102px rgb(255, 38, 0),
+    0 0 151px rgb(255, 0, 0);
+}
+
+.bottom-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-family: 'Bree Serif', serif;
+}
+
+.filter-wrapper {
+    margin-bottom: 50px;
+}
+
+.filter-wrapper h2 {
+    margin-bottom: 0;
+}
+
+.filter-wrapper .filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter > input, select {
+    margin-bottom: 10px;
+    height: 30px;
+    width: 200px;
+}
+
+.filter .filter-name {
+    padding-right: 19px;
+    border: none;
+    border-bottom: solid rgb(202, 6, 6) 2px;
+}
+
+.filter .filter-rare {
+    height: 34px;
+}
+
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card-set .btn-delete {
+    border: none;
+    width: 80px;
+    height: 30px;
+    background-color: rgb(231, 147, 52);
+    color: rgba(32, 26, 26, 0.925);
+    border-radius: 5%;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px 0 20px 0;
+}
+
+.btn-delete:hover {
+    cursor: pointer;
+    background-color: rgb(245, 122, 8);
+}
+
+.div-cards .card {
+    margin: 30px;
+
+}

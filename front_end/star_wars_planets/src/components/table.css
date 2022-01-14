@@ -1,0 +1,41 @@
+.cells {
+  text-align: center;
+  height: 50px;
+  width: fit-content;
+}
+
+.planets-table {
+  border-collapse: collapse;
+}
+
+.planets-table td, .planets-table th {
+  border: 1px solid rgb(230, 229, 229);
+  padding: 8px;
+}
+
+.planets-table th {
+  background-color: #f6e851be;
+  color: rgb(9, 9, 10);
+}
+
+
+.planets-table tr:not(:only-child):hover {
+  background-color: #f6e851be;
+  color: black;
+}
+
+#btn-next, #btn-previous {
+  background-color: rgb(239, 239, 243);
+  border: none;
+  border-radius: 5%;
+  font-family: Anakin;
+  height: 20px;
+  margin-right: 10px;
+  font-size: large;
+}
+
+.control-btn {
+  margin-top: 15px;
+  position: fixed;
+  bottom: 0;
+}
