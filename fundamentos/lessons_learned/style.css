@@ -1,0 +1,109 @@
+body {
+        background-color: rgb(253, 251, 251);
+        max-width: 90%;
+}
+
+#cabecalho {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        position: fixed;
+        background-color: rgba(195, 231, 207, 0.952);
+}
+
+#titulo {
+        text-align: center;
+        color: rgba(27, 66, 17, 0.89);
+        font-family: Sintony, sans-serif;
+}
+
+#navigation li {
+        display: inline-block;
+        padding-right: 20px;
+}
+
+#navigation li a {
+        color: rgba(27, 66, 17, 0.89);
+        text-decoration: none;
+        font-family: Sintony, sans-serif;
+        font-size: 14px;
+}
+
+.top {
+        margin: 105px auto;
+        max-width: 80%;
+}
+
+#minha_foto {
+        display: block;
+        float: left;
+        padding-bottom: 50px;
+}
+
+aside {
+        font-family: Dancing Script, cursive;
+        font-size: 30px;
+        line-height: 40px;
+        width: 40%;
+        float: right;
+ 
+}
+
+.main {
+        margin: auto 80px;
+}
+
+article {
+        font-family: Dancing Script, cursive;
+        font-size: 30px;
+        line-height: 40px;
+}
+
+.lado-esquerdo {
+        max-width: 55%;
+        float: left;
+        padding: 30px 50px;
+}
+
+.lado-direito {
+        border: 2px solid rgba(27, 66, 17, 0.89);
+        max-width: 20%;
+        float: right;
+        padding: 30px 60px;
+}
+
+#tabela {
+        margin-bottom: 50px;
+        margin-left: 150px;
+        font-family: Sintony, sans-serif;
+
+}
+
+#tabela table,th, td {
+        clear: both;
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+}
+
+#rodape {
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        background-color: rgba(195, 231, 207, 0.952);
+        left: 0;
+}
+
+#rodape a {
+        font-family: Dancing Script, cursive;
+        color: rgba(27, 66, 17, 0.89);
+        font-size: 50px;
+        display: block;
+        margin-left: 40%;
+        margin-top: 25px;
+}
+
+#rodape a:hover {
+        color: rgb(175, 8, 8);
+}
