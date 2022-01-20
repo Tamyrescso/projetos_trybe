@@ -9,6 +9,7 @@ import Opening from './components/Opening';
 import star from'./images/star.svg';
 import wars from'./images/wars.svg';
 
+
 function App() {
   const [showTable, setShowTable] = useState(false);
   useEffect(() => {
@@ -30,12 +31,14 @@ function App() {
                 <img src={star} alt="Star" className='title'/>
                 <img src={wars} alt="Wars" className='title'/>
               </div>
-              <FilterByName />
-              <div className='main-filters'>
-                <FilterByNumber />
-                <FilterByOrder />
+              <div>
+                <FilterByName />
+                <div className='main-filters'>
+                  <FilterByNumber />
+                  <FilterByOrder />
+                </div>
+                <Table />
               </div>
-              <Table />
             </Provider>
           )
         : <Opening />
