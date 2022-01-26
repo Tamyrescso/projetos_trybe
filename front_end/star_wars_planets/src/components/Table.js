@@ -5,6 +5,9 @@ import handleOrder from '../helpers/handleOrder';
 import Loading from './Loading';
 import './table.css';
 import fetchStarWarsPlanets from '../services';
+import PaginationControl from './PaginationControl';
+
+const PER_PAGE = 10;
 
 
 const HEADERS_TABLE = [
@@ -31,6 +34,9 @@ export default function Table() {
   const [fetchingPlanets, setFetchingPlanets] = useState([]);
   const [nextFetchingPage, setNextFetchingPage] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPlanets, setCurrentPlanets] = useState([]);
+  const [pageNumbers, setPageNumbers] = useState([]);
 
   useEffect(() => {
     if (nextFetchingPage === '') {
@@ -43,7 +49,6 @@ export default function Table() {
         response.then(({results}) => setFetchingPlanets([...fetchingPlanets, ...results]))
     } else {
       setData(fetchingPlanets)
-      setIsLoading(false)
     }
   }, [fetchingPlanets]);
 
@@ -61,7 +66,6 @@ export default function Table() {
   } else {
     newArrayToRender = handleOrder(data, order);
   }
-
   useEffect(() => {
     setPlanetsToRender(newArrayToRender);
   }, [newArrayToRender]);
@@ -73,19 +77,9 @@ export default function Table() {
     setCategoriesNames([...categoriesNames, target.id]);
   };
 
-  const handlePageClick = (e) => {
-
+  const handlePageClick = ({target}) => {
+    setCurrentPage(target.id)
   }
-
-  // const handleNextPrevious = ({target: { id }}) => {
-  //   setIsDisabledP(false)
-  //   setIsDisabledN(false)
-  //   const type = id === 'btn-next'? nextPage : previousPage
-  //   const response = fetchStarWarsPlanets(type);
-  //       response.then(({results}) => setData(results));
-  //       response.then(({next}) => next === null ? setIsDisabledN(true) : setNextPage(next));
-  //       response.then(({previous}) => previous === null ? setIsDisabledP(true) : setPreviousPage(previous));
-  // }
 
   const filtersUsed = (
     <div>
@@ -98,7 +92,22 @@ export default function Table() {
     </div>
   );
 
-  if (!isLoading) {
+  useEffect(() => {
+    if (planetsToRender.length) {
+      const indexOfLastPlanet = currentPage * PER_PAGE;
+      const indexOfFirstPlanet = indexOfLastPlanet - PER_PAGE;
+      const createCurrentPlanets = planetsToRender.slice(indexOfFirstPlanet, indexOfLastPlanet);
+      const newPageNumbers = [];
+      for (let i = 1; i <= Math.ceil(planetsToRender.length / PER_PAGE); i++) {
+        newPageNumbers.push(i);
+      }
+      setCurrentPlanets(createCurrentPlanets);
+      setPageNumbers(newPageNumbers);
+      setIsLoading(false);
+    }
+  }, [currentPage, planetsToRender])
+
+  if (currentPlanets.length > 0 && !isLoading) {
     return (
       <>
         {filterByNumericValue.length > 0 && filtersUsed}
@@ -110,7 +119,7 @@ export default function Table() {
             </tr>
           </thead>
           <tbody>
-            {planetsToRender.map((planet) => 
+            {currentPlanets.map((planet) => 
               (
                 <tr key={ planet.name } className='rows'>
                   {setTableCells(planet)}
@@ -119,10 +128,10 @@ export default function Table() {
             }
           </tbody>
         </table>
-        {/* <div className='control-btn'>
-          <button type='button' id='btn-previous' disabled={isDisabledP} onClick={ handleNextPrevious }>Previous</button>
-          <button type='button' id='btn-next' disabled={isDisabledN} onClick={ handleNextPrevious }>Next</button>
-        </div> */}
+        <PaginationControl
+          pageNumbers={pageNumbers}
+          handlePageClick={handlePageClick}
+        />
       </>
     );
   }
