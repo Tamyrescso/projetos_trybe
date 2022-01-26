@@ -2,8 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import TableContext from '../context/TableContext';
 import setTableCells from '../helpers/setTableCells';
 import handleOrder from '../helpers/handleOrder';
+import Loading from './Loading';
 import './table.css';
 import fetchStarWarsPlanets from '../services';
+import PaginationControl from './PaginationControl';
+
+const PER_PAGE = 10;
+
 
 const HEADERS_TABLE = [
   'Name', 'Rotation Period', 'Orbital Period', 'Diameter',
@@ -26,18 +31,28 @@ export default function Table() {
   } = useContext(TableContext);
 
   const [planetsToRender, setPlanetsToRender] = useState([]);
-  const [nextPage, setNextPage] = useState('');
-  const [previousPage, setPreviousPage] = useState('');
-  const [isDisabledP, setIsDisabledP] = useState(true);
-  const [isDisabledN, setIsDisabledN] = useState(false);
+  const [fetchingPlanets, setFetchingPlanets] = useState([]);
+  const [nextFetchingPage, setNextFetchingPage] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPlanets, setCurrentPlanets] = useState([]);
+  const [pageNumbers, setPageNumbers] = useState([]);
 
   useEffect(() => {
-    if (nextPage === '') {
+    if (nextFetchingPage === '') {
       const response = fetchStarWarsPlanets('https://swapi-trybe.herokuapp.com/api/planets/');
-        response.then(({results}) => setData(results))
-        response.then(({next}) => setNextPage(next))
+        response.then(({next}) => setNextFetchingPage(next))
+        response.then(({results}) => setFetchingPlanets(results))
+    } else if (nextFetchingPage !== null && nextFetchingPage !== '') {
+      const response = fetchStarWarsPlanets(nextFetchingPage);
+        response.then(({next}) => setNextFetchingPage(next))
+        response.then(({results}) => setFetchingPlanets([...fetchingPlanets, ...results]))
+    } else {
+      setData(fetchingPlanets)
     }
-  }, [nextPage, setData]);
+  }, [fetchingPlanets]);
+
+  
 
   useEffect(() => {
     setFilteredByName(planetsToRender.filter((item) => item.name.includes(name)));
@@ -51,7 +66,6 @@ export default function Table() {
   } else {
     newArrayToRender = handleOrder(data, order);
   }
-
   useEffect(() => {
     setPlanetsToRender(newArrayToRender);
   }, [newArrayToRender]);
@@ -63,26 +77,9 @@ export default function Table() {
     setCategoriesNames([...categoriesNames, target.id]);
   };
 
-  const handleNextPrevious = ({target: { id }}) => {
-    setIsDisabledP(false)
-    setIsDisabledN(false)
-    const type = id === 'btn-next'? nextPage : previousPage
-    const response = fetchStarWarsPlanets(type);
-        response.then(({results}) => setData(results));
-        response.then(({next}) => next === null ? setIsDisabledN(true) : setNextPage(next));
-        response.then(({previous}) => previous === null ? setIsDisabledP(true) : setPreviousPage(previous));
+  const handlePageClick = ({target}) => {
+    setCurrentPage(target.id)
   }
-
-  const justHeaders = (
-    <table className='planets-table'>
-      <thead>
-        <tr>
-          {HEADERS_TABLE.map((header, index) => (
-            <th key={ index }>{ header }</th>))}
-        </tr>
-      </thead>
-    </table>
-  );
 
   const filtersUsed = (
     <div>
@@ -95,15 +92,22 @@ export default function Table() {
     </div>
   );
 
-  if (filterByNumericValue.length && !filteredByNumericValues.length) {
-    return (
-      <>
-        { filtersUsed }
-        { justHeaders }
-      </>
-    );
-  }
-  if (data.length) {
+  useEffect(() => {
+    if (planetsToRender.length) {
+      const indexOfLastPlanet = currentPage * PER_PAGE;
+      const indexOfFirstPlanet = indexOfLastPlanet - PER_PAGE;
+      const createCurrentPlanets = planetsToRender.slice(indexOfFirstPlanet, indexOfLastPlanet);
+      const newPageNumbers = [];
+      for (let i = 1; i <= Math.ceil(planetsToRender.length / PER_PAGE); i++) {
+        newPageNumbers.push(i);
+      }
+      setCurrentPlanets(createCurrentPlanets);
+      setPageNumbers(newPageNumbers);
+      setIsLoading(false);
+    }
+  }, [currentPage, planetsToRender])
+
+  if (currentPlanets.length > 0 && !isLoading) {
     return (
       <>
         {filterByNumericValue.length > 0 && filtersUsed}
@@ -115,21 +119,21 @@ export default function Table() {
             </tr>
           </thead>
           <tbody>
-            {planetsToRender.length
-              ? planetsToRender.map((planet) => (
+            {currentPlanets.map((planet) => 
+              (
                 <tr key={ planet.name } className='rows'>
                   {setTableCells(planet)}
                 </tr>
               ))
-              : null}
+            }
           </tbody>
         </table>
-        <div className='control-btn'>
-          <button type='button' id='btn-previous' disabled={isDisabledP} onClick={ handleNextPrevious }>Previous</button>
-          <button type='button' id='btn-next' disabled={isDisabledN} onClick={ handleNextPrevious }>Next</button>
-        </div>
+        <PaginationControl
+          pageNumbers={pageNumbers}
+          handlePageClick={handlePageClick}
+        />
       </>
     );
   }
-  return justHeaders;
+  return <Loading />
 }
