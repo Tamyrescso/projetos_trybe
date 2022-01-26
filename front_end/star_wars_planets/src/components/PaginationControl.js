@@ -1,8 +1,9 @@
 import React from 'react';
+import './paginationControl.css';
 
 function PaginationControl({ handlePageClick, pageNumbers }) {
   return <div>
-    <ul>
+    <ul id='page-numbers'>
       {pageNumbers.map((number => (
         <li
         key={number}

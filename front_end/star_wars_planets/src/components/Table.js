@@ -7,6 +7,7 @@ import './table.css';
 import fetchStarWarsPlanets from '../services';
 import PaginationControl from './PaginationControl';
 
+//Toda paginação foi baseada no código: https://codepen.io/PiotrBerebecki/pen/pEYPbY
 const PER_PAGE = 10;
 
 
@@ -77,8 +78,8 @@ export default function Table() {
     setCategoriesNames([...categoriesNames, target.id]);
   };
 
-  const handlePageClick = ({target}) => {
-    setCurrentPage(target.id)
+  const handlePageClick = ({target: { id }}) => {
+    setCurrentPage(id)
   }
 
   const filtersUsed = (

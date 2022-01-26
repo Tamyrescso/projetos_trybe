@@ -11,17 +11,13 @@
 .planets-table td, .planets-table th {
   border: 1px solid rgb(230, 229, 229);
   padding: 8px;
+  font-weight: bolder;
 }
 
 .planets-table th {
   background-color: #f6e851be;
   color: rgb(9, 9, 10);
-}
-
-
-.planets-table tr:not(:only-child):hover {
-  background-color: #f6e851be;
-  color: black;
+  font-size: larger;
 }
 
 #btn-next, #btn-previous {

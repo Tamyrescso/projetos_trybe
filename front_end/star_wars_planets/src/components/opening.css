@@ -11,7 +11,6 @@
   animation: move-byline 10s linear infinite;
 }
 
-/* Keyframes */
 @keyframes star {
   0% {
     opacity: 0;
@@ -74,13 +73,11 @@
   }
 }
 
-/* Make the 3D work on the container */
 .starwars {
   perspective: 800px;
   transform-style: preserve3d;
 }
 
-/* General styles and layout */
 body {
   background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
 }
@@ -125,8 +122,6 @@ img {
   text-transform: uppercase;
   top: 29%;
 }
-
-/*** Media queries for adjusting to different screen sizes ***/
 
 @media only screen and (max-width: 600px) {
   .starwars {
