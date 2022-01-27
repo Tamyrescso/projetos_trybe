@@ -73,7 +73,7 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
 #### Bloco 19: Docker: Utilizando Containers
-- [ ] Projeto - Docker Todo-List
+- [x] Projeto - Docker Todo-List
 
 #### Bloco 20: Introdução à SQL
 - [ ] Projeto - All For One
