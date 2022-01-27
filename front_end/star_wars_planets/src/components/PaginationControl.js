@@ -1,7 +1,7 @@
 import React from 'react';
 import './paginationControl.css';
 
-function PaginationControl({ handlePageClick, pageNumbers }) {
+function PaginationControl({ handlePageClick, pageNumbers, activePage }) {
   return <div>
     <ul id='page-numbers'>
       {pageNumbers.map((number => (
@@ -9,6 +9,7 @@ function PaginationControl({ handlePageClick, pageNumbers }) {
         key={number}
         id={number}
         onClick={handlePageClick}
+        className={parseInt(activePage) === number? 'active' : 'not-active'}
       >
         {number}
       </li>

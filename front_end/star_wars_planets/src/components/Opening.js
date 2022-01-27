@@ -3,6 +3,8 @@ import star from'../images/star.svg';
 import wars from'../images/wars.svg';
 import './opening.css';
 
+//Abertura baseada no código: https://css-tricks.com/snippets/css/star-wars-crawl-text/
+
 
 function Opening() {
   return (

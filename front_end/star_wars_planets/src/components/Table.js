@@ -38,6 +38,7 @@ export default function Table() {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentPlanets, setCurrentPlanets] = useState([]);
   const [pageNumbers, setPageNumbers] = useState([]);
+  const [activePage, setActivePage] = useState(1);
 
   useEffect(() => {
     if (nextFetchingPage === '') {
@@ -79,6 +80,7 @@ export default function Table() {
   };
 
   const handlePageClick = ({target: { id }}) => {
+    setActivePage(id)
     setCurrentPage(id)
   }
 
@@ -132,6 +134,7 @@ export default function Table() {
         <PaginationControl
           pageNumbers={pageNumbers}
           handlePageClick={handlePageClick}
+          activePage={activePage}
         />
       </>
     );
