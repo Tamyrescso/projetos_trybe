@@ -5,10 +5,11 @@ function handleOrder(arrayToOrder, order) {
   if (column === 'name') {
     return arrayToOrder.sort((a, b) => (a.name > b.name ? REMAIN_ORDER : CHANGE_ORDER));
   }
+  const withoutUnknown = arrayToOrder.filter((planet) => planet[column] !== 'unknown')
   if (sort === 'ASC') {
-    return arrayToOrder.sort((a, b) => a[column] - b[column]);
+    return withoutUnknown.sort((a, b) => a[column] - b[column]);
   }
-  return arrayToOrder.sort((a, b) => b[column] - a[column]);
+  return withoutUnknown.sort((a, b) => b[column] - a[column]);
 }
 
 export default handleOrder;

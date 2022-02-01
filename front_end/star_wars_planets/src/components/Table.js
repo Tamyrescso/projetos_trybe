@@ -52,25 +52,26 @@ export default function Table() {
     } else {
       setData(fetchingPlanets)
     }
-  }, [fetchingPlanets]);
+  }, [fetchingPlanets, setFetchingPlanets]);
 
   
 
   useEffect(() => {
     setFilteredByName(planetsToRender.filter((item) => item.name.includes(name)));
-  }, [name, planetsToRender, setFilteredByName]);
+  }, [name]);
 
-  let newArrayToRender = [];
-  if (filteredByNumericValues.length) {
-    newArrayToRender = handleOrder(filteredByNumericValues, order);
-  } else if (name !== '') {
-    newArrayToRender = handleOrder(filteredByName, order);
-  } else {
-    newArrayToRender = handleOrder(data, order);
-  }
   useEffect(() => {
+    let newArrayToRender = [];
+    if (filteredByNumericValues.length) {
+      newArrayToRender = handleOrder(filteredByNumericValues, order);
+    } else if (name !== '') {
+      newArrayToRender = handleOrder(filteredByName, order);
+    } else {
+      newArrayToRender = handleOrder(data, order);
+    }
+
     setPlanetsToRender(newArrayToRender);
-  }, [newArrayToRender]);
+  }, [data, filteredByNumericValues, filteredByName, order])
 
   const handleDeleteButton = ({ target }) => {
     const arrayAfterFilterDelete = filterByNumericValue.filter(({ column }) => (
@@ -108,7 +109,7 @@ export default function Table() {
       setPageNumbers(newPageNumbers);
       setIsLoading(false);
     }
-  }, [currentPage, planetsToRender])
+  }, [currentPage, planetsToRender, order])
 
   if (currentPlanets.length > 0 && !isLoading) {
     return (
