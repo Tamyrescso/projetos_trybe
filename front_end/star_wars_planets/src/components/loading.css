@@ -8,10 +8,17 @@
   padding-top: 500px;
 }
 
-.lightsaber label {
+.lightsaber {
+  transform: rotate(20deg) translate(-50px, 50px);
+}
+
+.lightsaber2 {
+  transform: rotate(-20deg) translate(50px, 30px);
+}
+
+.lightsaber label, .lightsaber2 label{
   position: absolute;
   bottom: 0;
-  left: 0;
   z-index: 88;
   text-indent: -9999px;
   width: 15px;
@@ -22,7 +29,7 @@
   background: linear-gradient(to right, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 51%, rgba(254, 254, 254, 1) 100%);
 }
 
-.lightsaber .switch {
+.lightsaber .switch, .lightsaber2 .switch2 {
   background: #B94A37;
   width: 5px;
   height: 10px;
@@ -34,7 +41,7 @@
   border-radius: 10px;
 }
 
-.lightsaber .plasma {
+.lightsaber .plasma, .lightsaber2 .plasma2 {
   transition: height 300ms, ;
   border-radius: 12px 12px 0 0;
   position: absolute;
@@ -49,6 +56,11 @@
 .lightsaber input[type=checkbox]:checked ~ div.plasma {
   height: 250px;
   animation: opensaber 1s linear, glow 2s infinite;
+}
+
+.lightsaber2 input[type=checkbox]:checked ~ div.plasma2{
+  height: 250px;
+  animation: opensaber 1s linear, glow2 2s infinite;
 }
 
 @keyframes opensaber {
@@ -75,9 +87,25 @@
   }
 }
 
+@keyframes glow2 {
+  0% {
+    box-shadow: 0 0 10px #d14d4d;
+  }
+  50% {
+    box-shadow: 0 0 30px #d14d4d;
+  }
+  100% {
+    box-shadow: 0 0 10px #d14d4d;
+  }
+}
+
 
 .yoda {
   background: linear-gradient(to right, rgb(135, 220, 90) 0%, rgb(254, 254, 254) 30%, rgb(254, 254, 254) 50%, rgb(254, 254, 254) 70%, rgb(135, 220, 90) 100%);
+}
+
+.sith {
+  background: linear-gradient(to right, rgb(182, 10, 10) 0%, rgb(245, 161, 161) 30%, rgb(250, 176, 176) 50%, rgb(226, 134, 134) 70%, rgb(192, 19, 19) 100%);
 }
 
 div {
@@ -94,5 +122,6 @@ div {
   top: 150px;
   width: 300px;
   background-color: transparent;
-  background-image: -webkit-radial-gradient( center, 10em 8em, rgba(184, 235, 155, 0.75), transparent );
+  transform: rotate(-20deg);
+  background-image: -webkit-radial-gradient( center, 10em 8em, rgba(235, 227, 162, 0.89), transparent );
 }

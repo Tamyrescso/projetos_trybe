@@ -14,6 +14,12 @@ function Loading() {
 					<div className="switch"></div>
 					<div className="plasma yoda"></div>
 				</div>
+				<div className="lightsaber2">
+					<label htmlFor="sith"></label>
+					<input type="checkbox" id="sith" disabled checked />
+					<div className="switch2"></div>
+					<div className="plasma2 sith"></div>
+				</div>
 			</div>
 		
 		</section>
