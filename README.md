@@ -23,8 +23,6 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 - [x] Projeto - Arte com Pixels
 - [x] Projeto - Lista de tarefas
 - [x] (Bônus) Projeto - Meme Generator
-- [ ] (Bônus) Projeto - Color Guessing
-- [ ] (Bônus) Projeto - Mistery Letter
 
 #### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo
 - [x] Projeto - Trybewarts
@@ -76,10 +74,10 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 - [x] Projeto - Docker Todo-List
 
 #### Bloco 20: Introdução à SQL
-- [ ] Projeto - All For One
+- [x] Projeto - All For One
 
 #### Bloco 21: Funções SQL, JOINs e Normalização
-- [ ] Aula ao vivo + Projeto - One For All
+- [x] Projeto - One For All
 
 #### Bloco 22: Introdução ao desenvolvimento Web com Node.js
 - [ ] Projeto - Talker Manager
