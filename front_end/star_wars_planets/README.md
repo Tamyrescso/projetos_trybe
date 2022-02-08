@@ -151,4 +151,9 @@ O que será verificado:
 - Ordena os planetas do menor diametro para o maior diametro
 - Ordena os planetas do mais populoso para o menos populoso
 
-```
+# Implementação que desenvolvi:
+
+- Faz a chamada para todas as páginas da API retornando os 60 planetas disponíveis.
+- Implementa a lógica de páginação para melhor visualização dessa quantidade de dados.
+- Implementa lógica para filtragem e busca de dados em todas as páginas.
+
