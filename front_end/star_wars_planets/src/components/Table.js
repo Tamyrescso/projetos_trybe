@@ -7,7 +7,7 @@ import './table.css';
 import fetchStarWarsPlanets from '../services';
 import PaginationControl from './PaginationControl';
 
-//Toda paginação foi baseada no código: https://codepen.io/PiotrBerebecki/pen/pEYPbY
+//A paginação foi baseada no código: https://codepen.io/PiotrBerebecki/pen/pEYPbY
 const PER_PAGE = 10;
 
 
