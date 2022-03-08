@@ -80,10 +80,10 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 - [x] Projeto - One For All
 
 #### Bloco 22: Introdução ao desenvolvimento Web com Node.js
-- [ ] Projeto - Talker Manager
+- [x] Projeto - Talker Manager
 
 #### Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful
-- [ ] Projeto - Store Manager
+- [x] Projeto - Store Manager
 
 #### Bloco 24: Node.js: ORM e Autenticação
 - [ ] Projeto - API de Blogs
