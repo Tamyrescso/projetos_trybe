@@ -86,7 +86,7 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 - [x] Projeto - Store Manager
 
 #### Bloco 24: Node.js: ORM e Autenticação
-- [ ] Projeto - API de Blogs
+- [x] Projeto - API de Blogs
 
 #### Bloco 25: Deployment
 - [ ] Projeto - Stranger Things
