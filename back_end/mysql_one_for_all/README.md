@@ -5,8 +5,6 @@
 
 # Requisitos do projeto
 
-⚠️**AVISO IMPORTANTE:**⚠️ Você deve escrever sua query manualmente, com o gerador automático de queries do Workbench o avaliador não funcionará corretamente!
-
 ## Desafio 1
 
 * Crie um banco com o nome de **`SpotifyClone`**.
