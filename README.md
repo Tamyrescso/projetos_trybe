@@ -89,10 +89,10 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 - [x] Projeto - API de Blogs
 
 #### Bloco 25: Deployment
-- [ ] Projeto - Stranger Things
+- [x] Projeto - Stranger Things
 
 #### Bloco 26: TypeScript
-- [ ] Projeto - Trybe Smith
+- [x] Projeto - TrybeSmith
 
 #### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
 - [ ] Projeto - Trybers and Dragons
