@@ -89,16 +89,16 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 - [x] Projeto - API de Blogs
 
 #### Bloco 25: Deployment
-- [ ] Projeto - Stranger Things
+- [x] Projeto - Stranger Things
 
 #### Bloco 26: TypeScript
-- [ ] Projeto - Trybe Smith
+- [x] Projeto - TrybeSmith
 
 #### Bloco 27: Programação Orientada a Objetos (POO) e SOLID
-- [ ] Projeto - Trybers and Dragons
+- [x] Projeto - Trybers and Dragons
 
 #### Bloco 28: Projeto - TFC - Trybe Futebol Clube
-- [ ] Projeto - TFC - Trybe Futebol Clube
+- [x] Projeto - TFC - Trybe Futebol Clube
 
 #### Bloco 29: Introdução ao MongoDB
 - [ ] Projeto - Data Flights
