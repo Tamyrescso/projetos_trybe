@@ -101,12 +101,13 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 - [x] Projeto - TFC - Trybe Futebol Clube
 
 #### Bloco 29: Introdução ao MongoDB
-- [ ] Projeto - Data Flights
+- [x] Projeto - Commerce
 
-#### Bloco 30: MongoDB: Updates Simples e Complexos
-- [ ] Projeto - Commerce
+#### Bloco 30: MongoDB com Node.js e POO
+- [ ] Projeto - Car Shop
 
-#### Bloco 31: MasterClass - VPS, CI/CD
-
-#### Bloco 32: Projeto - App de Delivery
+#### Bloco 31: Projeto - App de Delivery
 - [ ] Projeto - App de Delivery
+
+#### Bloco 32: MasterClass - VPS, CI/CD
+
