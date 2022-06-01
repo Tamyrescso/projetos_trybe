@@ -106,8 +106,4 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 #### Bloco 30: MongoDB com Node.js e POO
 - [ ] Projeto - Car Shop
 
-#### Bloco 31: Projeto - App de Delivery
-- [ ] Projeto - App de Delivery
-
-#### Bloco 32: MasterClass - VPS, CI/CD
 
