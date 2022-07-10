@@ -104,6 +104,6 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 - [x] Projeto - Commerce
 
 #### Bloco 30: MongoDB com Node.js e POO
-- [ ] Projeto - Car Shop
+- [x] Projeto - Car Shop
 
 
