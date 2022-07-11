@@ -106,7 +106,7 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 #### Bloco 30: MongoDB com Node.js e POO
 - [x] Projeto - Car Shop
 
-## Desenvolvimento Back-end :hourglass_flowing_sand:
+## Ciência da Computação :hourglass_flowing_sand:
 
 #### Bloco 33:  Introdução à Python
 - [ ] Projeto - Job Insights
