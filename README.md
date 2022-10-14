@@ -106,22 +106,4 @@ Este repositório contém todos os projetos desenvolvidos por <a href="https://w
 #### Bloco 30: MongoDB com Node.js e POO
 - [x] Projeto - Car Shop
 
-## Ciência da Computação :hourglass_flowing_sand:
 
-#### Bloco 33:  Introdução à Python
-- [ ] Projeto - Job Insights
-
-#### Bloco 34:  Padrões de Projeto
-- [ ] Projeto - Inventory Report
-
-#### Bloco 35:  Redes e raspagem de dados
-- [ ] Projeto - Tech News
-
-#### Bloco 36:  Algoritmos
-- [ ] Projeto - Algoritmos
-
-#### Bloco 37: Estrutura de Dados I: Arrays, Listas, Filas e Pilhas
-- [ ] Projeto - TING: Trybe Is Not Google
-
-#### Bloco 38: Estrutura de Dados II: Hashmaps e Sets
-- [ ] Projeto - Restaurant Orders
